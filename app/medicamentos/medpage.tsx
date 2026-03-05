@@ -67,7 +67,9 @@ export default function MedPage() {
               <h2 className="card-title">Cadastrar remedio</h2>
 
               <div className="field-row">
-                <span className="field-icon">✏️</span>
+                <span className="field-icon">
+                 <img src="pencil.png" alt="editar" />
+                </span>
                 <input
                   className="field-input"
                   type="text"
@@ -79,7 +81,9 @@ export default function MedPage() {
               <div className="divider" />
 
               <div className="field-row">
-                <span className="field-icon">◈</span>
+              <span className="field-icon">
+                 <img src="layers.png" alt="editar" />
+                </span>
                 <input
                   className="field-input"
                   type="text"
@@ -91,7 +95,9 @@ export default function MedPage() {
               <div className="divider" />
 
               <div className="field-row">
-                <span className="field-icon">⇅</span>
+                <span className="field-icon">
+                 <img src="chevron-expand.png" alt="editar" />
+                </span>
                 <input
                   className="field-input"
                   type="number"
@@ -103,7 +109,9 @@ export default function MedPage() {
               <div className="divider" />
 
               <div className="field-row">
-                <span className="field-icon">∨</span>
+                <span className="field-icon">
+                 <img src="vector.png" alt="editar" />
+                </span>
                 <select
                   className="field-input field-select"
                   value={status}
@@ -128,7 +136,9 @@ export default function MedPage() {
               <div className="pendencias-list">
                 {pendencias.map((p) => (
                   <div key={p.id} className="pendencia-item">
-                    <span className="pendencia-icon">⚠</span>
+                    <span className="field-icon">
+                 <img src="patch-exclamation.png" alt="editar" />
+                </span>
                     <div className="pendencia-info">
                       <span className="pendencia-nome">{p.nome}</span>
                       <span className="pendencia-dose">{p.dose}</span>
@@ -193,7 +203,7 @@ export default function MedPage() {
         }
 
         .menu-item-active {
-          background-color: #a8dba4;
+          background-color: #e8f5e5;
           font-weight: 600;
           color: #1a1a1a;
         }
@@ -288,8 +298,8 @@ export default function MedPage() {
           margin-left: auto;
           margin-right: auto;
           background-color: #ffffff;
-          border: 1.5px solid #ccc;
-          border-radius: 8px;
+          border: 1.5px solid #0000001f;
+          border-radius: 14px;
           padding: 12px;
           font-size: 15px;
           color: #333;
@@ -298,7 +308,7 @@ export default function MedPage() {
         }
 
         .confirm-btn:hover {
-          background-color: #f0f0f0;
+          background-color: #e8f5e5;
           border-color: #aaa;
         }
 

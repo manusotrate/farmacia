@@ -69,16 +69,7 @@ export default function CaixaPage() {
             {medicamentosFiltrados.map((med) => (
               <div key={med.id} className="med-card">
                 <div className="med-img">
-                  <div className="med-img-inner">
-                    <div className="pill-label">
-                      <span className="pill-brand">Eurofarma</span>
-                      <span className="pill-name">cloridrato de<br />sertralina</span>
-                    </div>
-                    <div className="pill-badge">
-                      <span className="pill-g">G</span>
-                      <span className="pill-generic">Medicamento<br />Genérico</span>
-                    </div>
-                  </div>
+                 <img src="sertralina.png" alt="" />
                 </div>
                 <div className="med-info">
                   <h3 className="med-nome">{med.nome}</h3>
@@ -135,7 +126,7 @@ export default function CaixaPage() {
           font-size: 7px;
           color: #4a7c59;
           letter-spacing: 0.08em;
-        }
+        } 
         .main-layout {
           display: flex;
           flex: 1;
@@ -164,9 +155,9 @@ export default function CaixaPage() {
         .menu-item:hover {
           background-color: #e8f5e5;
         }
-        .menu-item-active {
-          background-color: #a8dba4;
-          font-weight: 600;
+         {
+          background-color: #e8f5e5;
+          font-weight: 600;.menu-item-active
           color: #1a1a1a;
         }
         .content {
@@ -182,7 +173,7 @@ export default function CaixaPage() {
           padding: 10px 20px;
           gap: 10px;
           margin-bottom: 24px;
-          max-width: 600px;
+          max-width: 100%;
           box-shadow: 0 1px 4px rgba(0,0,0,0.08);
         }
         .search-icon {
@@ -215,7 +206,7 @@ export default function CaixaPage() {
           box-shadow: 0 6px 16px rgba(0,0,0,0.12);
         }
         .med-img {
-          background: linear-gradient(135deg, #e8f5e5 0%, #c8edc5 100%);
+          background: #e8f5e5
           padding: 16px;
           display: flex;
           justify-content: center;

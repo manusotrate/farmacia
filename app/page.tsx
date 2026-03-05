@@ -38,7 +38,7 @@ export default function Home() {
         <div className="form-panel">
           <div className="form-row">
             <div className="field-group">
-              <label className="field-label">NOME</label>
+              <label className="field-label">Nome</label>
               <input
                 className="field-input"
                 type="text"
@@ -48,7 +48,7 @@ export default function Home() {
               />
             </div>
             <div className="field-group">
-              <label className="field-label">SOBRENOME</label>
+              <label className="field-label">Sobrenome</label>
               <input
                 className="field-input"
                 type="text"
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           <div className="field-group full-width">
-            <label className="field-label">FUNÇÃO</label>
+            <label className="field-label">Função</label>
             <div className="select-wrapper">
               <select
                 className="field-select"
@@ -96,7 +96,7 @@ export default function Home() {
             CONFIRMAR
           </button>
 
-          <Image src="/logo.png" alt="Farmácia Sálvia" width={180} height={52} priority />
+          
         </div>
 
         {/* Welcome Panel */}
@@ -136,7 +136,7 @@ export default function Home() {
         }
 
         .form-panel {
-          background-color: #7ec87a;
+          background-color: #8AD87A;
           border-radius: 12px;
           padding: 48px 44px 40px;
           display: flex;
@@ -225,7 +225,7 @@ export default function Home() {
         }
 
         .confirm-btn {
-          background-color: #5a9e5a;
+          background-color: #A0FF8C;
           color: white;
           border: none;
           border-radius: 14px;
