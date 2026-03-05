@@ -202,12 +202,17 @@ export default function MedPage() {
           flex: 1;
           padding: 32px;
           overflow-y: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .panels {
           display: flex;
           gap: 24px;
           align-items: flex-start;
+          width: 100%;
+          max-width: 900px;
         }
 
         .card {
@@ -219,11 +224,10 @@ export default function MedPage() {
 
         .cadastro-card {
           flex: 1;
-          max-width: 420px;
         }
 
         .pendencias-card {
-          width: 240px;
+          width: 280px;
         }
 
         .card-title {
