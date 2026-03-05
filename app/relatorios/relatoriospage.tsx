@@ -144,7 +144,7 @@ export default function RelatoriosPage() {
           background-color: #e8f5e5;
         }
         .menu-item-active {
-          background-color: #a8dba4;
+          background-color: #e8f5e5;
           font-weight: 600;
           color: #1a1a1a;
         }

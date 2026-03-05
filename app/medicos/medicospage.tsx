@@ -80,7 +80,9 @@ export default function MedicosPage() {
 
             {/* Filtro */}
             <div className="filter-row">
-              <span className="filter-icon">▽</span>
+              <span className="filter-icon">
+                <img src="funnel.png" alt="" />
+              </span>
               <input
                 className="filter-input"
                 type="text"
@@ -180,7 +182,7 @@ export default function MedicosPage() {
         }
 
         .menu-item-active {
-          background-color: #a8dba4;
+          background-color: #e8f5e5;
           font-weight: 600;
           color: #1a1a1a;
         }

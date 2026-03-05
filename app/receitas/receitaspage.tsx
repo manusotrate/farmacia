@@ -59,7 +59,9 @@ export default function ReceitasPage() {
             {/* Nome do médico + UBS lado a lado */}
             <div className="fields-row">
               <div className="field-row">
-                <span className="field-icon">✏️</span>
+              <span className="field-icon">
+                 <img src="pencil.png" alt="editar" />
+                </span>
                 <input
                   className="field-input"
                   type="text"
@@ -70,7 +72,9 @@ export default function ReceitasPage() {
               </div>
               <div className="divider-v" />
               <div className="field-row">
-                <span className="field-icon">✏️</span>
+                <span className="field-icon">
+                 <img src="pencil.png" alt="editar" />
+                </span>
                 <input
                   className="field-input"
                   type="text"
@@ -92,7 +96,9 @@ export default function ReceitasPage() {
             />
 
             <button className="save-btn" onClick={handleSalvar}>
-              <span className="save-icon">⬇</span> Salvar
+              <span className="save-icon">
+                <img src="download.png" alt="" />
+                </span> Salvar
             </button>
           </div>
         </main>
@@ -215,14 +221,14 @@ export default function ReceitasPage() {
         }
 
         .divider-v {
-          width: 1px;
+          width: 0px;
           height: 32px;
           background-color: #e0e0e0;
           margin: 0 16px;
         }
 
         .divider {
-          height: 1px;
+          height: 0px;
           background-color: #e8e8e8;
           margin: 8px 0 20px;
         }

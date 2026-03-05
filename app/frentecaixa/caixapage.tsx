@@ -55,7 +55,9 @@ export default function CaixaPage() {
         {/* Content */}
         <main className="content">
           <div className="search-wrapper">
-            <span className="search-icon">🔍</span>
+           <span className="field-icon">
+                 <img src="lupa.png" alt="editar" />
+                </span>
             <input
               className="search-input"
               type="text"
