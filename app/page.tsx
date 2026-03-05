@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [nome, setNome] = useState("");
   const [sobrenome, setSobrenome] = useState("");
   const [cpf, setCpf] = useState("");
@@ -25,7 +27,7 @@ export default function Home() {
       alert("Por favor, preencha todos os campos.");
       return;
     }
-    alert(`Bem-vindo, ${nome}!`);
+    router.push("/frentecaixa");
   };
 
   return (
@@ -152,19 +154,19 @@ export default function Home() {
           gap: 48px;
           z-index: 10;
           position: relative;
-          padding: 24px;
+          padding: 100px;
           max-width: 860px;
           width: 100%;
         }
 
         .form-panel {
           background-color: #7ec87a;
-          border-radius: 24px;
-          padding: 36px 32px 28px;
+          border-radius: 12px;
+          padding: 30px 30px 30px;
           display: flex;
           flex-direction: column;
           gap: 20px;
-          min-width: 380px;
+          min-width: 460px;
           box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
