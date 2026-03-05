@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const menuItems = [
-  { label: "Frente de caixa", key: "frente" },
-  { label: "Medicamentos", key: "medicamentos" },
-  { label: "Receitas", key: "receitas" },
-  { label: "Médicos", key: "medicos" },
-  { label: "UBS", key: "ubs" },
-  { label: "Relatórios", key: "relatorios" },
+  { label: "Frente de caixa", key: "frente", path: "/frentecaixa" },
+  { label: "Medicamentos", key: "medicamentos", path: "/medicamentos" },
+  { label: "Receitas", key: "receitas", path: "/receitas" },
+  { label: "Médicos", key: "medicos", path: "/medicos" },
+  { label: "UBS", key: "ubs", path: "/ubs" },
+  { label: "Relatórios", key: "relatorios", path: "/relatorios" },
 ];
 
 const mockMedicamentos = [
@@ -21,7 +23,7 @@ const mockMedicamentos = [
 ];
 
 export default function CaixaPage() {
-  const [activeMenu, setActiveMenu] = useState("frente");
+  const router = useRouter();
   const [busca, setBusca] = useState("");
 
   const medicamentosFiltrados = mockMedicamentos.filter((m) =>
@@ -33,18 +35,7 @@ export default function CaixaPage() {
     <div className="wrapper">
       {/* Header */}
       <header className="header">
-        <div className="logo">
-          <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
-            <path d="M14 2L4 8v12l10 6 10-6V8L14 2z" stroke="#4a7c59" strokeWidth="2" fill="none" />
-            <path d="M14 2L4 8v12l10 6 10-6V8L14 2z" fill="#4a7c59" opacity="0.15" />
-            <path d="M9 14h10M14 9v10" stroke="#4a7c59" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-          <div className="logo-text">
-            <span className="logo-farmacia">FARMÁCIA</span>
-            <span className="logo-salvia">SÁLVIA</span>
-            <span className="logo-tagline">VIVA SEU MELHOR ESTAR</span>
-          </div>
-        </div>
+        <Image src="/logo.png" alt="Farmácia Sálvia" width={180} height={52} priority />
       </header>
 
       <div className="main-layout">
@@ -53,8 +44,8 @@ export default function CaixaPage() {
           {menuItems.map((item) => (
             <button
               key={item.key}
-              className={`menu-item ${activeMenu === item.key ? "menu-item-active" : ""}`}
-              onClick={() => setActiveMenu(item.key)}
+              className={`menu-item ${item.key === "frente" ? "menu-item-active" : ""}`}
+              onClick={() => router.push(item.path)}
             >
               {item.label}
             </button>
@@ -110,7 +101,6 @@ export default function CaixaPage() {
           display: flex;
           flex-direction: column;
         }
-
         .header {
           background-color: #ffffff;
           padding: 12px 24px;
@@ -118,26 +108,22 @@ export default function CaixaPage() {
           display: flex;
           align-items: center;
         }
-
         .logo {
           display: flex;
           align-items: center;
           gap: 10px;
         }
-
         .logo-text {
           display: flex;
           flex-direction: column;
           line-height: 1.1;
         }
-
         .logo-farmacia {
           font-size: 11px;
           font-weight: 400;
           color: #2d5a30;
           letter-spacing: 0.05em;
         }
-
         .logo-salvia {
           font-size: 18px;
           font-weight: 700;
@@ -145,18 +131,15 @@ export default function CaixaPage() {
           color: #2d5a30;
           letter-spacing: 0.03em;
         }
-
         .logo-tagline {
           font-size: 7px;
           color: #4a7c59;
           letter-spacing: 0.08em;
         }
-
         .main-layout {
           display: flex;
           flex: 1;
         }
-
         .sidebar {
           width: 220px;
           background-color: #ffffff;
@@ -166,7 +149,6 @@ export default function CaixaPage() {
           flex-direction: column;
           gap: 4px;
         }
-
         .menu-item {
           text-align: left;
           padding: 14px 24px;
@@ -179,23 +161,19 @@ export default function CaixaPage() {
           margin: 0 8px;
           transition: background 0.15s;
         }
-
         .menu-item:hover {
           background-color: #e8f5e5;
         }
-
         .menu-item-active {
           background-color: #a8dba4;
           font-weight: 600;
           color: #1a1a1a;
         }
-
         .content {
           flex: 1;
           padding: 24px;
           overflow-y: auto;
         }
-
         .search-wrapper {
           display: flex;
           align-items: center;
@@ -207,12 +185,10 @@ export default function CaixaPage() {
           max-width: 600px;
           box-shadow: 0 1px 4px rgba(0,0,0,0.08);
         }
-
         .search-icon {
           font-size: 16px;
           opacity: 0.5;
         }
-
         .search-input {
           border: none;
           outline: none;
@@ -221,13 +197,11 @@ export default function CaixaPage() {
           width: 100%;
           background: transparent;
         }
-
         .med-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 20px;
         }
-
         .med-card {
           background-color: #ffffff;
           border-radius: 16px;
@@ -236,19 +210,16 @@ export default function CaixaPage() {
           transition: transform 0.15s, box-shadow 0.15s;
           cursor: pointer;
         }
-
         .med-card:hover {
           transform: translateY(-2px);
           box-shadow: 0 6px 16px rgba(0,0,0,0.12);
         }
-
         .med-img {
           background: linear-gradient(135deg, #e8f5e5 0%, #c8edc5 100%);
           padding: 16px;
           display: flex;
           justify-content: center;
         }
-
         .med-img-inner {
           background: linear-gradient(to bottom, #4a9e46 0%, #2d7a2a 50%, #e8c020 50%, #e8c020 100%);
           border-radius: 8px;
@@ -259,19 +230,16 @@ export default function CaixaPage() {
           overflow: hidden;
           box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
-
         .pill-label {
           padding: 8px 8px 4px;
           flex: 1;
         }
-
         .pill-brand {
           display: block;
           font-size: 7px;
           color: #ffffff;
           font-style: italic;
         }
-
         .pill-name {
           display: block;
           font-size: 8px;
@@ -280,7 +248,6 @@ export default function CaixaPage() {
           line-height: 1.2;
           margin-top: 2px;
         }
-
         .pill-badge {
           background-color: #e8c020;
           padding: 6px 8px;
@@ -288,25 +255,21 @@ export default function CaixaPage() {
           align-items: center;
           gap: 4px;
         }
-
         .pill-g {
           font-size: 20px;
           font-weight: 900;
           color: #c0790a;
           line-height: 1;
         }
-
         .pill-generic {
           font-size: 6px;
           color: #c0790a;
           font-weight: 700;
           line-height: 1.3;
         }
-
         .med-info {
           padding: 12px 16px 16px;
         }
-
         .med-nome {
           font-size: 13px;
           font-weight: 700;
@@ -314,20 +277,15 @@ export default function CaixaPage() {
           margin: 0 0 8px 0;
           line-height: 1.3;
         }
-
         .med-detail {
           font-size: 12px;
           color: #555;
           margin: 2px 0;
           line-height: 1.4;
         }
-
         @media (max-width: 900px) {
-          .med-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
+          .med-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
         @media (max-width: 600px) {
           .sidebar { display: none; }
           .med-grid { grid-template-columns: 1fr; }

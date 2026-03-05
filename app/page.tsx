@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter();
@@ -95,32 +96,7 @@ export default function Home() {
             CONFIRMAR
           </button>
 
-          <div className="logo">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path
-                d="M14 2L4 8v12l10 6 10-6V8L14 2z"
-                stroke="#4a7c59"
-                strokeWidth="2"
-                fill="none"
-              />
-              <path
-                d="M14 2L4 8v12l10 6 10-6V8L14 2z"
-                fill="#4a7c59"
-                opacity="0.15"
-              />
-              <path
-                d="M9 14h10M14 9v10"
-                stroke="#4a7c59"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-            <div className="logo-text">
-              <span className="logo-farmacia">FARMÁCIA</span>
-              <span className="logo-salvia">SÁLVIA</span>
-              <span className="logo-tagline">MEU SEU MELHOR ESTAR</span>
-            </div>
-          </div>
+          <Image src="/logo.png" alt="Farmácia Sálvia" width={180} height={52} priority />
         </div>
 
         {/* Welcome Panel */}
@@ -154,7 +130,7 @@ export default function Home() {
           gap: 48px;
           z-index: 10;
           position: relative;
-          padding: 100px;
+          padding: 24px;
           max-width: 860px;
           width: 100%;
         }
@@ -162,7 +138,7 @@ export default function Home() {
         .form-panel {
           background-color: #7ec87a;
           border-radius: 12px;
-          padding: 30px 30px 30px;
+          padding: 48px 44px 40px;
           display: flex;
           flex-direction: column;
           gap: 20px;
