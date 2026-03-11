@@ -55,9 +55,9 @@ export default function CaixaPage() {
         {/* Content */}
         <main className="content">
           <div className="search-wrapper">
-           <span className="field-icon">
-                 <img src="lupa.png" alt="editar" />
-                </span>
+            <span className="field-icon">
+              <img src="lupa.png" alt="editar" />
+            </span>
             <input
               className="search-input"
               type="text"
@@ -71,7 +71,7 @@ export default function CaixaPage() {
             {medicamentosFiltrados.map((med) => (
               <div key={med.id} className="med-card">
                 <div className="med-img">
-                 <img src="sertralina.png" alt="" />
+                  <img src="sertralina.png" alt="" />
                 </div>
                 <div className="med-info">
                   <h3 className="med-nome">{med.nome}</h3>
@@ -87,6 +87,11 @@ export default function CaixaPage() {
       </div>
 
       <style jsx>{`
+          @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+        
+        *{
+          font-family: 'Gabarito', sans-serif;
+        }
         .wrapper {
           min-height: 100vh;
           background-color: #f0f0f0;
@@ -134,7 +139,7 @@ export default function CaixaPage() {
           flex: 1;
         }
         .sidebar {
-          width: 220px;
+          width: 295px;
           background-color: #ffffff;
           border-right: 1px solid #e0e0e0;
           padding: 16px 0;
@@ -202,6 +207,8 @@ export default function CaixaPage() {
           box-shadow: 0 2px 8px rgba(0,0,0,0.07);
           transition: transform 0.15s, box-shadow 0.15s;
           cursor: pointer;
+        
+          
         }
         .med-card:hover {
           transform: translateY(-2px);

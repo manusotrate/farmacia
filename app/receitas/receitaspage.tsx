@@ -105,6 +105,11 @@ export default function ReceitasPage() {
       </div>
 
       <style jsx>{`
+               @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+        
+        *{
+          font-family: 'Gabarito', sans-serif;
+        }
         .wrapper {
           min-height: 100vh;
           background-color: #f0f0f0;
@@ -127,7 +132,7 @@ export default function ReceitasPage() {
         }
 
         .sidebar {
-          width: 220px;
+          width: 295px;
           background-color: #ffffff;
           border-right: 1px solid #e0e0e0;
           padding: 16px 0;

@@ -75,7 +75,9 @@ export default function UBSPage() {
             </div>
 
             <div className="filter-row">
-              <span className="filter-icon">▽</span>
+              <span className="filter-icon">
+                <img src="funnel.png" alt="" />
+              </span>
               <input
                 className="filter-input"
                 type="text"
@@ -124,6 +126,11 @@ export default function UBSPage() {
       </div>
 
       <style jsx>{`
+               @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+        
+        *{
+          font-family: 'Gabarito', sans-serif;
+        }
         .wrapper {
           min-height: 100vh;
           background-color: #f0f0f0;
@@ -143,7 +150,7 @@ export default function UBSPage() {
           flex: 1;
         }
         .sidebar {
-          width: 220px;
+          width: 295px;
           background-color: #ffffff;
           border-right: 1px solid #e0e0e0;
           padding: 16px 0;
@@ -167,7 +174,7 @@ export default function UBSPage() {
           background-color: #e8f5e5;
         }
         .menu-item-active {
-          background-color: #a8dba4;
+          background-color: #e8f5e5;
           font-weight: 600;
           color: #1a1a1a;
         }

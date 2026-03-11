@@ -38,7 +38,7 @@ export default function Home() {
         <div className="form-panel">
           <div className="form-row">
             <div className="field-group">
-              <label className="field-label">Nome</label>
+              <label className="field-label">NOME</label>
               <input
                 className="field-input"
                 type="text"
@@ -48,7 +48,7 @@ export default function Home() {
               />
             </div>
             <div className="field-group">
-              <label className="field-label">Sobrenome</label>
+              <label className="field-label">SOBRENOME</label>
               <input
                 className="field-input"
                 type="text"
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           <div className="field-group full-width">
-            <label className="field-label">Função</label>
+            <label className="field-label">FUNÇÃO</label>
             <div className="select-wrapper">
               <select
                 className="field-select"
@@ -110,6 +110,17 @@ export default function Home() {
       </div>
 
       <style jsx>{`
+
+        
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+        
+        *{
+        
+          font-family: 'Gabarito', sans-serif;
+          
+        }
+
+
         .login-wrapper {
           min-height: 100vh;
           background-image: url('/background.png');
@@ -136,9 +147,9 @@ export default function Home() {
         }
 
         .form-panel {
-          background-color: #8AD87A;
-          border-radius: 12px;
-          padding: 48px 44px 40px;
+          background-color: #A0FF8C;
+          border-radius: 50px;
+          padding: 61px 32px 56px;
           display: flex;
           flex-direction: column;
           gap: 20px;
@@ -163,18 +174,18 @@ export default function Home() {
         }
 
         .field-label {
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          color: #2d5a30;
+          font-size: 14px;
+          font-weight: 500;
+          color: #000000ff;
+          margin-left: 10px;
         }
 
         .field-input {
-          background-color: #c8edc5;
+          background-color: #e6ffd1ff;
           border: none;
-          border-radius: 12px;
-          padding: 12px 14px;
-          font-size: 14px;
+          border-radius: 40px;
+          padding: 18px 17px;
+          font-size: 20px;
           color: #2d5a30;
           outline: none;
           width: 100%;
@@ -183,12 +194,13 @@ export default function Home() {
         }
 
         .field-input:focus {
-          background-color: #d8f5d5;
+          background-color: #e6ffd1d0;
           box-shadow: 0 0 0 2px #4a9e46;
+          color: #000000ae;
         }
 
         .field-input::placeholder {
-          color: #8abf87;
+          color: #000000ae;
         }
 
         .select-wrapper {
@@ -196,12 +208,12 @@ export default function Home() {
         }
 
         .field-select {
-          background-color: #c8edc5;
+          background-color: #e6ffd1ff;
           border: none;
-          border-radius: 12px;
-          padding: 12px 40px 12px 14px;
-          font-size: 14px;
-          color: #2d5a30;
+          border-radius: 40px;
+          padding: 18px 40px 18px 17px;
+          font-size: 20px;
+          color: #000000ae;
           outline: none;
           width: 100%;
           appearance: none;
@@ -210,7 +222,7 @@ export default function Home() {
         }
 
         .field-select:focus {
-          background-color: #d8f5d5;
+          background-color: #e6ffd1d0;
           box-shadow: 0 0 0 2px #4a9e46;
         }
 
@@ -225,16 +237,16 @@ export default function Home() {
         }
 
         .confirm-btn {
-          background-color: #A0FF8C;
-          color: white;
+          background-color: #8AD87A;
+          color: #000000ff;
           border: none;
-          border-radius: 14px;
-          padding: 16px;
-          font-size: 14px;
+          border-radius: 20px;
+          padding: 24px 163px 24px ;
+          font-size: 22px;
           font-weight: 700;
-          letter-spacing: 0.1em;
           cursor: pointer;
-          margin-top: 8px;
+          margin-top: 24px;
+          margin-bottom: 52px;
           transition: background 0.2s, transform 0.1s;
         }
 
@@ -285,6 +297,7 @@ export default function Home() {
         .welcome-panel {
           flex: 1;
           padding: 16px;
+          margin-bottom: 310px;
         }
 
         .welcome-title {
@@ -292,7 +305,7 @@ export default function Home() {
           font-weight: 900;
           color: #1a1a1a;
           line-height: 1;
-          margin: 0 0 16px 0;
+          margin: 0 0 16px 0px;
           letter-spacing: -0.01em;
         }
 
